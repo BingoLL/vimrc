@@ -52,8 +52,10 @@ filetype plugin indent on    " required
 
 colorscheme molokai
 set number
-set hls
-set showtabline=2
+set hls "#高亮
+set showtabline=2 "#标签页文件名
+set autoindent  "#缩进
+"set pastetoggle=<f5> "复制粘贴切换键，好像不管用
 
 "============scrooloose/nerdtree==========
 "map <C-n>:NERDTreeToggle<CR>
