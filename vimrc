@@ -28,6 +28,12 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 Plugin 'flazz/vim-colorschemes'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+Plugin 'davidhalter/jedi-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -47,3 +53,8 @@ filetype plugin indent on    " required
 colorscheme molokai
 set number
 set hls
+set showtabline=2
+
+"============scrooloose/nerdtree==========
+"map <C-n>:NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
