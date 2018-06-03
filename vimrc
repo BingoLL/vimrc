@@ -56,6 +56,9 @@ set hls "#高亮
 set showtabline=2 "#标签页文件名
 set autoindent  "#缩进
 "set pastetoggle=<f5> "复制粘贴切换键，好像不管用
+"<C-l> 通常用于清除并重绘显示屏（参见:h CTRL-L ）。而新的映射项，是在
+"原有基础之上增加了暂时关闭查找高亮的功能
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 "============scrooloose/nerdtree==========
 "map <C-n>:NERDTreeToggle<CR>
