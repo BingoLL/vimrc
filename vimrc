@@ -34,6 +34,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 Plugin 'davidhalter/jedi-vim'
+
+Plugin 'artur-shaik/vim-javacomplete2'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -54,6 +56,8 @@ colorscheme molokai
 set number
 set hls "#高亮
 set showtabline=2 "#标签页文件名
+set ts=4
+set expandtab
 set autoindent  "#缩进
 "set pastetoggle=<f5> "复制粘贴切换键，好像不管用
 "<C-l> 通常用于清除并重绘显示屏（参见:h CTRL-L ）。而新的映射项，是在
@@ -64,12 +68,27 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 "map <C-n>:NERDTreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 
+"============artur-shaik/vim-javacomplete2==========
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+"================快捷键   
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
+imap <F5> <Plug>(JavaComplete-Imports-Add)
+
+nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+
+nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+
+
 
 
 "=============
 "
 
-set number
 " 隐藏滚动条"
 set guioptions-=r
 set guioptions-=L
@@ -93,7 +112,6 @@ set matchtime=5
 set ignorecase "忽略大小写"
 set incsearch
 set hlsearch "高亮搜索项"
-set noexpandtab "不允许扩展table"
 set whichwrap+=<,>,h,l
 set autoread
 set cursorline "突出显示当前行"
