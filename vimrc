@@ -36,6 +36,9 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'davidhalter/jedi-vim'
 
 Plugin 'artur-shaik/vim-javacomplete2'
+
+Plugin 'posva/vim-vue'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
